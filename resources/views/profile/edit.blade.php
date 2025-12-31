@@ -7,23 +7,31 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
-            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
+
+            <!-- Update Profile Info -->
+            <div class="p-6 bg-[#FDFDF6] sm:rounded-lg border border-[#E2E2E0] shadow-sm">
+                <h3 class="text-lg font-semibold text-[#3C3C38] mb-4">Update Profile Information</h3>
                 <div class="max-w-xl">
                     @include('profile.partials.update-profile-information-form')
                 </div>
             </div>
 
-            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
+            <!-- Update Password -->
+            <div class="p-6 bg-[#FDFDF6] sm:rounded-lg border border-[#E2E2E0] shadow-sm">
+                <h3 class="text-lg font-semibold text-[#3C3C38] mb-4">Change Password</h3>
                 <div class="max-w-xl">
                     @include('profile.partials.update-password-form')
                 </div>
             </div>
 
-            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
+            <!-- Delete User -->
+            <div class="p-6 bg-[#FDFDF6] sm:rounded-lg border border-[#E2E2E0] shadow-sm">
+                <h3 class="text-lg font-semibold text-[#3C3C38] mb-4">Delete Account</h3>
                 <div class="max-w-xl">
                     @include('profile.partials.delete-user-form')
                 </div>
             </div>
+
         </div>
     </div>
 </x-app-layout>

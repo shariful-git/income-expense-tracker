@@ -10,7 +10,7 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Auth::user()->categories()->orderBy('type')->orderBy('name')->get();
+        $categories = Auth::user()->categories()->orderBy('type')->orderBy('name')->paginate(10);
         return view('categories.index', compact('categories'));
     }
 

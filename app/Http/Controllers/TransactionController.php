@@ -16,7 +16,7 @@ class TransactionController extends Controller
             ->with('category')
             ->orderByDesc('date')
             ->orderByDesc('created_at')
-            ->paginate(20);
+            ->paginate(10);
 
         return view('transactions.index', compact('transactions'));
     }
