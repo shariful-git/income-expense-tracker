@@ -23,7 +23,7 @@
                             <!-- Category -->
                             <div>
                                 <label class="block text-sm font-medium mb-1">
-                                    Category
+                                    Category <span class="required text-red-500">*</span>
                                 </label>
                                 <select name="category_id" required
                                     class="w-full rounded-md border-gray-300 focus:border-indigo-400 focus:ring-indigo-400">
@@ -47,7 +47,7 @@
                             <!-- Amount -->
                             <div>
                                 <label class="block text-sm font-medium mb-1">
-                                    Amount
+                                    Amount <span class="required text-red-500">*</span>
                                 </label>
                                 <input type="number" step="0.01" name="amount"
                                     value="{{ old('amount') }}"
@@ -62,11 +62,11 @@
                             <!-- Date -->
                             <div>
                                 <label class="block text-sm font-medium mb-1">
-                                    Date
+                                    Date <span class="required text-red-500">*</span>
                                 </label>
-                                <input type="date" name="date"
+                                <input type="text" name="date"
                                     value="{{ old('date', today()->format('Y-m-d')) }}"
-                                    class="w-full rounded-md border-gray-300 focus:border-indigo-400 focus:ring-indigo-400"
+                                    class="date-picker w-full rounded-md border-gray-300 focus:border-indigo-400 focus:ring-indigo-400"
                                     required>
                                 @error('date')
                                     <p class="mt-1 text-sm text-rose-600">{{ $message }}</p>

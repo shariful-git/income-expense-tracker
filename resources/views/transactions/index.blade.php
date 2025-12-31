@@ -48,7 +48,7 @@
                                     @forelse($transactions as $transaction)
                                         <tr class="hover:bg-gray-50">
                                             <td class="px-6 py-4">
-                                                {{ $transaction->date }}
+                                                {{ date('d-M-Y',strtotime($transaction->date)) }}
                                             </td>
 
                                             <td class="px-6 py-4">

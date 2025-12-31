@@ -24,7 +24,7 @@
                             <!-- Name -->
                             <div>
                                 <label class="block text-sm font-medium mb-1">
-                                    Category Name
+                                    Category Name <span class="required text-red-500">*</span>
                                 </label>
                                 <input type="text" name="name"
                                        value="{{ old('name', $category->name) }}"
@@ -38,7 +38,7 @@
                             <!-- Type -->
                             <div>
                                 <label class="block text-sm font-medium mb-1">
-                                    Type
+                                    Type <span class="required text-red-500">*</span>
                                 </label>
                                 <select name="type" required
                                         class="w-full rounded-md border-gray-300 focus:border-indigo-400 focus:ring-indigo-400">

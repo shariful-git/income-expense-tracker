@@ -108,7 +108,7 @@
                                         @foreach ($recentTransactions as $t)
                                             <tr class="hover:bg-gray-100">
                                                 <td class="px-6 py-4">
-                                                    {{ $t->date }}
+                                                    {{ date('d-M-Y',strtotime($t->date)) }}
                                                 </td>
                                                 <td class="px-6 py-4">
                                                     <span class="px-2 py-1 rounded-full text-xs

@@ -13,8 +13,8 @@ class DashboardController extends Controller
         $user = Auth::user();
 
         // Current month boundaries
-        $startOfMonth = Carbon::now()->startOfMonth();
-        $endOfMonth   = Carbon::now()->endOfMonth();
+        $startOfMonth = Carbon::now()->startOfMonth()->format('Y-m-d');
+        $endOfMonth   = Carbon::now()->endOfMonth()->format('Y-m-d');
 
         // All transactions this month with category
         $monthlyTransactions = $user->transactions()
