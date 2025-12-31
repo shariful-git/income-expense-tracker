@@ -11,8 +11,8 @@ This project aims to provide a clean, intuitive personal finance management tool
 - Add, edit, delete expense entries (with amount, date, category, and description)
 - Predefined and custom categories for income/expenses
 - Dashboard with overview: total income, total expenses, balance, and monthly summary
-- Monthly/Yearly reports with simple charts (using Laravel Livewire or Chart.js)
-- Data export to CSV
+- Monthly/Yearly reports with simple charts (using Laravel Livewire or Chart.js) - (upcomming)
+- Data export to CSV - (upcomming)
 - Responsive design (works on mobile and desktop)
 - Easy to maintain and extend
 
