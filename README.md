@@ -39,4 +39,4 @@ This project aims to provide a clean, intuitive personal finance management tool
 1. **Clone the repository**
    ```bash
    git clone https://github.com/shariful-git/income-expense-tracker.git
-   cd personal-income-expense-tracker
+   cd income-expense-tracker
