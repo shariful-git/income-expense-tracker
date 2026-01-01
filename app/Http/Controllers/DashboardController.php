@@ -37,7 +37,7 @@ class DashboardController extends Controller
         // Recent 5 transactions for quick view
         $recentTransactions = $user->transactions()
             ->with('category')
-            ->orderByDesc('date')
+            ->orderByDesc('id')
             ->limit(5)
             ->get();
 
