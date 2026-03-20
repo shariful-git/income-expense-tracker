@@ -36,17 +36,22 @@
                             <table class="min-w-full text-sm">
                                 <thead class="bg-gray-100 text-gray-600 uppercase text-xs">
                                     <tr>
+                                        <th class="px-6 py-3 text-left">SL</th>
                                         <th class="px-6 py-3 text-left">Date</th>
                                         <th class="px-6 py-3 text-left">Category</th>
                                         <th class="px-6 py-3 text-left">Description</th>
-                                        <th class="px-6 py-3 text-right">Amount</th>
+                                        <th class="px-6 py-3 text-center">Amount</th>
                                         <th class="px-6 py-3 text-right">Actions</th>
                                     </tr>
                                 </thead>
 
                                 <tbody class="divide-y divide-gray-200 bg-white">
-                                    @forelse($transactions as $transaction)
+                                    @forelse($transactions as $key => $transaction)
                                         <tr class="hover:bg-gray-50">
+                                            <td class="px-6 py-4 text-left">
+                                                {{ $key + 1 }}
+                                            </td>
+
                                             <td class="px-6 py-4">
                                                 {{ date('d-M-Y',strtotime($transaction->date)) }}
                                             </td>
@@ -63,7 +68,7 @@
                                                 {{ $transaction->description ?? '-' }}
                                             </td>
 
-                                            <td class="px-6 py-4 text-right font-medium">
+                                            <td class="px-6 py-4 text-center font-medium">
                                                 {{ number_format($transaction->amount, 2) }}
                                             </td>
 
@@ -87,7 +92,7 @@
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td colspan="5" class="px-6 py-12 text-center text-gray-500">
+                                            <td colspan="6" class="px-6 py-12 text-center text-gray-500">
                                                 No transactions yet.
                                                 <a href="{{ route('transactions.create') }}"
                                                     class="text-indigo-600 hover:underline">

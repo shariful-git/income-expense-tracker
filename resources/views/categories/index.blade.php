@@ -36,20 +36,25 @@
                             <table class="min-w-full text-sm">
                                 <thead class="bg-gray-100 text-gray-600 uppercase text-xs">
                                     <tr>
+                                        <th class="px-6 py-3 text-left">SL</th>
                                         <th class="px-6 py-3 text-left">Name</th>
-                                        <th class="px-6 py-3 text-left">Type</th>
+                                        <th class="px-6 py-3 text-center">Type</th>
                                         <th class="px-6 py-3 text-right">Actions</th>
                                     </tr>
                                 </thead>
 
                                 <tbody class="divide-y divide-gray-200 bg-white">
-                                    @forelse($categories as $category)
+                                    @forelse($categories as $key => $category)
                                         <tr class="hover:bg-gray-50 transition">
+                                            <td class="px-6 py-4 text-left">
+                                                {{ $key + 1 }}
+                                            </td>
+
                                             <td class="px-6 py-4 font-medium">
                                                 {{ $category->name }}
                                             </td>
 
-                                            <td class="px-6 py-4">
+                                            <td class="px-6 py-4 text-center">
                                                 <span
                                                     class="px-2 py-1 rounded-full text-xs
                                                     {{ $category->type === 'income' ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700' }}">
@@ -77,7 +82,7 @@
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td colspan="3" class="px-6 py-12 text-center text-gray-500">
+                                            <td colspan="4" class="px-6 py-12 text-center text-gray-500">
                                                 No categories yet.
                                                 <a href="{{ route('categories.create') }}"
                                                     class="text-indigo-600 hover:underline">
